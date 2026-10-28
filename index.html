@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#102b3f">
+  <meta name="description" content="Choose English or Somali to take the English Learning Survey.">
+  <title>English Learning Survey | Choose Your Language</title>
+  <style>
+    :root {
+      --navy: #102b3f;
+      --blue: #1677a8;
+      --teal: #26b6a5;
+      --ink: #172b3a;
+      --muted: #627586;
+      --paper: #f3f8fb;
+      --white: #fff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; min-height: 100vh; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink); background:
+        radial-gradient(circle at 8% 10%, rgba(38,182,165,.13), transparent 28rem),
+        radial-gradient(circle at 95% 90%, rgba(22,119,168,.12), transparent 25rem), var(--paper);
+      display: flex; flex-direction: column;
+    }
+    header { width: min(1080px, 100%); margin: 0 auto; padding: 25px 24px; display:flex; align-items:center; justify-content:space-between; gap:16px; }
+    .brand { display:flex; align-items:center; gap:12px; font-weight:800; letter-spacing:-.04em; font-size:1.25rem; color:var(--navy); }
+    .brand-mark { width:42px; height:42px; display:grid; place-items:center; border-radius:14px; color:white; background:linear-gradient(135deg,var(--blue),var(--teal)); box-shadow:0 8px 20px #1677a82c; font-size:1.2rem; }
+    .tag { font-size:.78rem; color:var(--muted); border:1px solid #dbe7ee; background:#ffffffa6; padding:8px 12px; border-radius:999px; }
+    main { width:min(920px,100%); margin:auto; padding:30px 24px 64px; flex:1; display:flex; align-items:center; }
+    .panel { width:100%; background:rgba(255,255,255,.88); border:1px solid #e1ebf1; border-radius:28px; padding:clamp(26px,6vw,60px); box-shadow:0 24px 70px rgba(16,43,63,.08); text-align:center; }
+    .eyebrow { display:inline-flex; align-items:center; gap:8px; color:#087e79; background:#e8f8f5; border:1px solid #d0f0e9; border-radius:999px; padding:8px 13px; font-size:.78rem; font-weight:750; letter-spacing:.04em; text-transform:uppercase; }
+    h1 { color:var(--navy); font-size:clamp(2.1rem,6vw,4rem); letter-spacing:-.065em; line-height:1.04; margin:22px 0 16px; }
+    .intro { color:var(--muted); max-width:590px; margin:0 auto; line-height:1.75; font-size:clamp(1rem,2.3vw,1.12rem); }
+    .choose { margin:36px 0 16px; font-size:1rem; font-weight:750; color:var(--navy); }
+    .language-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; max-width:620px; margin:0 auto; }
+    .language-card { display:flex; flex-direction:column; align-items:flex-start; text-align:left; text-decoration:none; color:inherit; background:white; border:1.5px solid #dfe9ef; border-radius:20px; padding:24px; min-height:190px; transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease; }
+    .language-card:hover,.language-card:focus-visible { transform:translateY(-4px); border-color:var(--teal); box-shadow:0 14px 32px rgba(16,43,63,.10); outline:none; }
+    .flag { display:grid; place-items:center; width:48px; height:48px; border-radius:15px; background:#eef7fb; font-size:1.65rem; margin-bottom:18px; }
+    .language-name { font-size:1.2rem; font-weight:800; color:var(--navy); }
+    .language-description { color:var(--muted); font-size:.9rem; margin-top:7px; }
+    .go { margin-top:auto; padding-top:18px; color:#087e79; font-size:.9rem; font-weight:800; display:flex; align-items:center; gap:7px; }
+    .note { margin:24px auto 0; color:var(--muted); font-size:.85rem; line-height:1.6; max-width:550px; }
+    footer { padding:20px 24px 28px; text-align:center; color:#7b8c99; font-size:.8rem; }
+    @media (max-width:560px) {
+      header { padding:18px 18px; }
+      .tag { display:none; }
+      main { padding:16px 16px 36px; align-items:flex-start; }
+      .panel { padding:30px 20px; border-radius:23px; }
+      .language-grid { grid-template-columns:1fr; gap:12px; }
+      .language-card { min-height:155px; padding:20px; }
+      .flag { margin-bottom:12px; }
+      .go { padding-top:12px; }
+    }
+    @media (prefers-reduced-motion: reduce) { *,*::before,*::after { transition:none !important; scroll-behavior:auto !important; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand"><span class="brand-mark" aria-hidden="true">S</span><span>English Learning Survey</span></div>
+    <span class="tag">Somali &amp; English</span>
+  </header>
+
+  <main>
+    <section class="panel" aria-labelledby="headline">
+      <div class="eyebrow"><span aria-hidden="true">✦</span> Your voice matters</div>
+      <h1 id="headline">Help shape the future of English learning.</h1>
+      <p class="intro">We want to understand the challenges people face when learning and speaking English. Your feedback can help us build a better learning experience for people in Somaliland.</p>
+
+      <p class="choose">Choose your preferred language / Dooro luqadda aad doorbidayso</p>
+      <div class="language-grid">
+        <!-- Replace ENGLISH_FORM_LINK with your English Google Forms link. -->
+        <a class="language-card" href="https://docs.google.com/forms/d/e/1FAIpQLSe8d6LXI590ioIpkvoba_2NuOBm6Z4BjRBJq1vi3bfRu88WlQ/viewform?usp=publish-editor" id="english-link">
+          <span class="flag" aria-hidden="true">🇬🇧</span>
+          <span class="language-name">English</span>
+          <span class="language-description">Take the survey in English</span>
+          <span class="go">Start survey <span aria-hidden="true">→</span></span>
+        </a>
+        <!-- Replace SOMALI_FORM_LINK with your Somali Google Forms link. -->
+        <a class="language-card" href="https://docs.google.com/forms/d/e/1FAIpQLSdACKcvldHe1ljzxyV4am8MRHzM9VUbSelqUnYHVXlCeSr79g/viewform?usp=publish-editor" id="somali-link">
+          <span class="flag" aria-hidden="true">🇸🇴</span>
+          <span class="language-name">Af-Soomaali</span>
+          <span class="language-description">Ka qaybgal sahanka Af-Soomaaliga</span>
+          <span class="go">Bilow sahanka <span aria-hidden="true">→</span></span>
+        </a>
+      </div>
+      <p class="note">The survey takes approximately 5–7 minutes. Participation is voluntary. Please answer honestly and do not include private information.</p>
+    </section>
+  </main>
+
+  <footer>© <span id="year"></span> English Learning Survey · Your voice matters.</footer>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+ype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#102b3f">
+  <meta name="description" content="Choose English or Somali to take the English Learning Survey.">
+  <title>English Learning Survey | Choose Your Language</title>
+  <style>
+    :root {
+      --navy: #102b3f;
+      --blue: #1677a8;
+      --teal: #26b6a5;
+      --ink: #172b3a;
+      --muted: #627586;
+      --paper: #f3f8fb;
+      --white: #fff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; min-height: 100vh; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink); background:
+        radial-gradient(circle at 8% 10%, rgba(38,182,165,.13), transparent 28rem),
+        radial-gradient(circle at 95% 90%, rgba(22,119,168,.12), transparent 25rem), var(--paper);
+      display: flex; flex-direction: column;
+    }
+    header { width: min(1080px, 100%); margin: 0 auto; padding: 25px 24px; display:flex; align-items:center; justify-content:space-between; gap:16px; }
+    .brand { display:flex; align-items:center; gap:12px; font-weight:800; letter-spacing:-.04em; font-size:1.25rem; color:var(--navy); }
+    .brand-mark { width:42px; height:42px; display:grid; place-items:center; border-radius:14px; color:white; background:linear-gradient(135deg,var(--blue),var(--teal)); box-shadow:0 8px 20px #1677a82c; font-size:1.2rem; }
+    .tag { font-size:.78rem; color:var(--muted); border:1px solid #dbe7ee; background:#ffffffa6; padding:8px 12px; border-radius:999px; }
+    main { width:min(920px,100%); margin:auto; padding:30px 24px 64px; flex:1; display:flex; align-items:center; }
+    .panel { width:100%; background:rgba(255,255,255,.88); border:1px solid #e1ebf1; border-radius:28px; padding:clamp(26px,6vw,60px); box-shadow:0 24px 70px rgba(16,43,63,.08); text-align:center; }
+    .eyebrow { display:inline-flex; align-items:center; gap:8px; color:#087e79; background:#e8f8f5; border:1px solid #d0f0e9; border-radius:999px; padding:8px 13px; font-size:.78rem; font-weight:750; letter-spacing:.04em; text-transform:uppercase; }
+    h1 { color:var(--navy); font-size:clamp(2.1rem,6vw,4rem); letter-spacing:-.065em; line-height:1.04; margin:22px 0 16px; }
+    .intro { color:var(--muted); max-width:590px; margin:0 auto; line-height:1.75; font-size:clamp(1rem,2.3vw,1.12rem); }
+    .choose { margin:36px 0 16px; font-size:1rem; font-weight:750; color:var(--navy); }
+    .language-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; max-width:620px; margin:0 auto; }
+    .language-card { display:flex; flex-direction:column; align-items:flex-start; text-align:left; text-decoration:none; color:inherit; background:white; border:1.5px solid #dfe9ef; border-radius:20px; padding:24px; min-height:190px; transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease; }
+    .language-card:hover,.language-card:focus-visible { transform:translateY(-4px); border-color:var(--teal); box-shadow:0 14px 32px rgba(16,43,63,.10); outline:none; }
+    .flag { display:grid; place-items:center; width:48px; height:48px; border-radius:15px; background:#eef7fb; font-size:1.65rem; margin-bottom:18px; }
+    .language-name { font-size:1.2rem; font-weight:800; color:var(--navy); }
+    .language-description { color:var(--muted); font-size:.9rem; margin-top:7px; }
+    .go { margin-top:auto; padding-top:18px; color:#087e79; font-size:.9rem; font-weight:800; display:flex; align-items:center; gap:7px; }
+    .note { margin:24px auto 0; color:var(--muted); font-size:.85rem; line-height:1.6; max-width:550px; }
+    footer { padding:20px 24px 28px; text-align:center; color:#7b8c99; font-size:.8rem; }
+    @media (max-width:560px) {
+      header { padding:18px 18px; }
+      .tag { display:none; }
+      main { padding:16px 16px 36px; align-items:flex-start; }
+      .panel { padding:30px 20px; border-radius:23px; }
+      .language-grid { grid-template-columns:1fr; gap:12px; }
+      .language-card { min-height:155px; padding:20px; }
+      .flag { margin-bottom:12px; }
+      .go { padding-top:12px; }
+    }
+    @media (prefers-reduced-motion: reduce) { *,*::before,*::after { transition:none !important; scroll-behavior:auto !important; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand"><span class="brand-mark" aria-hidden="true">S</span><span>English Learning Survey</span></div>
+    <span class="tag">Somali &amp; English</span>
+  </header>
+
+  <main>
+    <section class="panel" aria-labelledby="headline">
+      <div class="eyebrow"><span aria-hidden="true">✦</span> Your voice matters</div>
+      <h1 id="headline">Help shape the future of English learning.</h1>
+      <p class="intro">We want to understand the challenges people face when learning and speaking English. Your feedback can help us build a better learning experience for people in Somaliland.</p>
+
+      <p class="choose">Choose your preferred language / Dooro luqadda aad doorbidayso</p>
+      <div class="language-grid">
+        <!-- Replace ENGLISH_FORM_LINK with your English Google Forms link. -->
+        <a class="language-card" href="https://docs.google.com/forms/d/e/1FAIpQLSe8d6LXI590ioIpkvoba_2NuOBm6Z4BjRBJq1vi3bfRu88WlQ/viewform?usp=publish-editor" id="english-link">
+          <span class="flag" aria-hidden="true">🇬🇧</span>
+          <span class="language-name">English</span>
+          <span class="language-description">Take the survey in English</span>
+          <span class="go">Start survey <span aria-hidden="true">→</span></span>
+        </a>
+        <!-- Replace SOMALI_FORM_LINK with your Somali Google Forms link. -->
+        <a class="language-card" href="https://docs.google.com/forms/d/e/1FAIpQLSdACKcvldHe1ljzxyV4am8MRHzM9VUbSelqUnYHVXlCeSr79g/viewform?usp=publish-editor" id="somali-link">
+          <span class="flag" aria-hidden="true">🇸🇴</span>
+          <span class="language-name">Af-Soomaali</span>
+          <span class="language-description">Ka qaybgal sahanka Af-Soomaaliga</span>
+          <span class="go">Bilow sahanka <span aria-hidden="true">→</span></span>
+        </a>
+      </div>
+      <p class="note">The survey takes approximately 5–7 minutes. Participation is voluntary. Please answer honestly and do not include private information.</p>
+    </section>
+  </main>
+
+  <footer>© <span id="year"></span> English Learning Survey · Your voice matters.</footer>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    // Prevent accidental clicks until you replace the placeholder links.
+    document.querySelectorAll('a.language-card').forEach(function (link) {
+      link.addEventListener('click', function (event) {
+        if (link.getAttribute('href').endsWith('_FORM_LINK')) {
+          event.preventDefault();
+          alert('Please add your Google Forms link to this language button before publishing.');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
